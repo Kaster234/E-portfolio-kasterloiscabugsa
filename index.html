@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kasterlois Cabugsa - IT Student specializing in Web Development, Graphics Design, and emerging technologies.">
+  <meta name="keywords" content="Kasterlois Cabugsa, IT Student, Web Development, Graphics Design, Portfolio">
+  <title>Kasterlois Cabugsa | Professional E-Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- Script -->
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.home-section, .projects-section');
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+      selectedSection.style.display = 'block';
+    }
+
+    const navLinks = document.querySelectorAll('.header nav a');
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + sectionId) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('load', function () {
+    showSection('home');
+  });
+</script>
+
+<!-- Header -->
+<header class="header">
+  <a href="#home" class="logo" onclick="showSection('home'); return false;" title="Back to Home | Click for Contact Info">
+    Cabugsa
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+      <li><a href="#projects" onclick="showSection('projects'); return false;">Projects</a></li>
+      <li><a href="#skills" onclick="showSection('skills'); return false;">Skills</a></li>
+      <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="home-section reveal">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Kasterlois Cabugsa</span></h1>
+      <p class="subtitle">IT Student at San Isidro College</p>
+
+      <p class="description">
+        Passionate about <strong>Web Development</strong> and emerging technologies.
+        I create innovative digital solutions that combine creativity with technical expertise.
+        Currently building my foundation in IT while exploring the latest trends in software development.
+      </p>
+    </div>
+
+    <div class="profile-container">
+      <img src="cabugsa.png" alt="Kasterlois Cabugsa" class="profile-image">
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="home-section reveal">
+  <div class="content">
+    <h2>About Me</h2>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>Hello! I'm Kasterlois Cabugsa, a passionate IT student at San Isidro College...</p>
+        <p>Currently enrolled in the Bachelor of Science in Information Technology program...</p>
+        <p>Beyond the classroom, I'm constantly learning through personal projects...</p>
+      </div>
+
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <i class="bx bx-code-alt"></i>
+          <h3>Full-Stack Development</h3>
+          <p>Building responsive web applications...</p>
+        </div>
+
+        <div class="highlight-item">
+          <i class="bx bx-palette"></i>
+          <h3>Digital Design</h3>
+          <p>Creating visually stunning graphics...</p>
+        </div>
+
+        <div class="highlight-item">
+          <i class="bx bx-brain"></i>
+          <h3>Problem Solving</h3>
+          <p>Analytical thinking and innovative solutions...</p>
+        </div>
+
+        <div class="highlight-item">
+          <i class="bx bx-trending-up"></i>
+          <h3>Continuous Learning</h3>
+          <p>Staying updated with emerging technologies...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="home-section reveal">
+  <div class="content">
+    <h2>My Projects</h2>
+    <p class="section-description">Here are some of the projects I've worked on...</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-image-container">
+          <img src="" alt="Event Webpage Project" class="project-image">
+
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="#" class="view-project-btn">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h3>Event Webpage</h3>
+          <p>A comprehensive event management website...</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image-container">
+          <img src="" alt="Portfolio Website Project" class="project-image">
+
+          <div class="project-overlay">
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="#" class="view-project-btn">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>An interactive portfolio website with smooth animations...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="home-section reveal">
+  <div class="content">
+    <h2>My Skills</h2>
+
+    <p class="section-description">Technical and creative skills I've developed...</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3><i class="bx bx-code"></i> Technical Skills</h3>
+
+        <div class="skill-items">
+          <div class="skill-item">
+            <span class="skill-name">HTML & CSS</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 10%"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 10%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="bx bx-network-chart"></i> IT Fundamentals</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <span class="skill-name">Cybersecurity Basics</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 10%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="bx bx-palette"></i> Creative Skills</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <span class="skill-name">Graphics Design</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 10%"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="home-section reveal">
+  <div class="content">
+    <h2>Get In Touch</h2>
+
+    <p class="section-description">I'd love to hear from you!</p>
+
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="bx bx-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>cabugsak@sic.edu.ph</p>
+            <a href="mailto:cabugsak@sic.edu.ph">Send Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2026 Kasterlois Cabugsa | All Rights Reserved</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/kasterloiscabugsa" target="_blank"><i class="bx bxl-facebook"></i></a>
+    <a href="mailto:cabugsak@sic.edu.ph"><i class="bx bx-envelope"></i></a>
+    <a href=""><i class="bx bxl-github"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
